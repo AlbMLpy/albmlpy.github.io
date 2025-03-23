@@ -11,11 +11,25 @@
 
     <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/style.css" />
     <link rel="alternate" type="application/rss+xml" title="{{ site.name }} - {{ site.description }}" href="{{ site.baseurl }}/feed.xml" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 
     <!-- Created with Jekyll Now - http://github.com/barryclark/jekyll-now -->
   </head>
 
   <body>
+
+    <div class="navigation">
+      <nav class="top-nav">
+        <a href="/" class="nav-item">Home</a>
+        <a href="/papers" class="nav-item">Papers</a>
+        <!--<a href="/projects" class="nav-item">Projects</a>-->
+        <!--<a href="/blog" class="nav-item">Blog</a>-->
+        <!--<a href="/about" class="nav-item">About</a>-->
+        <!--<a href="/contact" class="nav-item">Contact</a>-->
+      </nav>
+    </div>
+
+
     <div class="wrapper-masthead">
       <div class="container">
         <header class="masthead clearfix">
@@ -26,13 +40,20 @@
             <p class="site-description">{{ site.description }}</p>
           </div>
 
-          <nav>
-            <a href="{{ site.baseurl }}/">Blog</a>
+          <!--<nav>
             <a href="{{ site.baseurl }}/about">About</a>
-          </nav>
+            <a href="{{ site.baseurl }}/">Blog</a> 
+          </nav>-->
         </header>
       </div>
     </div>
+
+
+    <!--<button id="theme-toggle">
+      <i id="theme-icon" class="fas fa-sun"></i>
+      <script src="{{ '/assets/js/theme-toggle.js' | relative_url }}"></script>
+    </button>  -->
+
 
     <div id="main" role="main" class="container">
       {{ content }}
