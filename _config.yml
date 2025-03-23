@@ -5,7 +5,7 @@ name: Albert Saiapin
 # Short bio or description (displayed in the header)
 description: AI researcher interested in Tensor Networks, Deep Learning, Machine Learning and Uncertainty Estimation
 # URL of your avatar or profile pic (you could use your GitHub profile pic)
-avatar: /images/Me.jpg
+avatar: #/images/Me.jpg
 
 ##### OPTIONAL FLAGS #####
 # Includes an icon in the footer for each username you enter
