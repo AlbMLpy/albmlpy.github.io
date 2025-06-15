@@ -4,7 +4,7 @@ title: Research Papers
 permalink: /papers/
 ---
 
-- **[Tensor Network Based Feature Learning Model](#)** - *AISTATS, 2025*  
+- **[Tensor Network Based Feature Learning Model](https://proceedings.mlr.press/v258/saiapin25a.html)** - *AISTATS, 2025*  
 
   In this paper, we introduce the Feature Learning (FL) model, where tensor-product features are represented as a learnable *Canonical Polyadic Decomposition (CPD)*. By leveraging this CPD structure, we efficiently learn the hyperparameters associated with different features alongside the model parameters using an *Alternating Least Squares (ALS)* optimization method. We prove the effectiveness of the FL model through experiments on real data of various dimensionality and scale. The results show that the FL model can be consistently trained 3-5 times faster than and have the prediction quality on par with a standard cross-validated model. [*GitHub*](https://github.com/AlbMLpy/TN-FL-Model).
 
