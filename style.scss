@@ -1,323 +1,251 @@
 ---
 ---
 
-//
-// IMPORTS
-//
-
 @import "reset";
 @import "variables";
-// Syntax highlighting @import is at the bottom of this file
 
-/**************/
-/* BASE RULES */
-/**************/
+// ---------------------
+// BASE RULES
+// ---------------------
 
 html {
   font-size: 100%;
 }
 
 body {
-	background: $white;
+  background: $warmCream;
   font: 20px/1.4 $helvetica;
-  color: $darkGray;
+  color: $warmGray;
 }
 
+// Container
 .container {
   margin: 0 auto;
   max-width: 1200px;
   padding: 0 10px;
-  width: 100%;
-  /*border: 1px solid $black;*/
 }
 
-.navigation {
-  margin: 0 auto;
-  max-width: 1200px;
-  padding: 0 10px;
-  width: 100%;
-}
-
+// Headings
 h1, h2, h3, h4, h5, h6 {
   font-family: $helveticaNeue;
   color: $burntUmber;
   font-weight: bold;
-
-  line-height: 1.7;
   margin: 1em 0 15px;
-  padding: 0;
+  line-height: 1.7;
 
   @include mobile {
     line-height: 1.4;
   }
 }
 
-h1 {
-  font-size: 50px;
-  a {
-    color: inherit;
-  }
-}
+h1 { font-size: 50px; }
+h2 { font-size: 30px; }
+h3 { font-size: 20px; }
+h4 { font-size: 18px; color: $gray; }
 
-h2 {
-  font-size: 30px;
-}
-
-h3 {
-  font-size: 20px;
-}
-
-h4 {
-  font-size: 18px;
-  color: $gray;
-}
-
-p {
-  margin: 15px 0;
-}
+// Paragraphs and text
+p { margin: 15px 0; }
 
 a {
   color: $burntUmber;
   text-decoration: none;
-	cursor: pointer;
-  &:hover, &:active {
-    color: $blue;
-  }
+  &:hover, &:active { color: $linkBlue; }
 }
 
 ul, ol {
   margin: 15px 0;
   padding-left: 30px;
 }
+ul { list-style-type: disc; }
+ol { list-style-type: decimal; }
+ul ul, ol ul { list-style-type: circle; }
 
-ul {
-  list-style-type: disc;
-}
+em, i { font-style: italic; }
+strong, b { font-weight: bold; }
 
-ol {
-  list-style-type: decimal;
-}
+img { max-width: 100%; }
 
-ol ul, ul ol, ul ul, ol ol {
-  margin: 0;
-}
+// Date styling
+.date { font-style: italic; color: $gray; }
 
-ul ul, ol ul {
-  list-style-type: circle;
-}
+// Text selection
+::-moz-selection { color: $black; background: $lightGray; }
+::selection { color: $black; background: $lightGray; }
 
-em, i {
-  font-style: italic;
-}
+// ---------------------
+// LAYOUT / MASTHEAD
+// ---------------------
 
-strong, b {
-  font-weight: bold;
-}
-
-img {
-  max-width: 100%;
-}
-
-// Fixes images in popup boxes from Google Translate
-.gmnoprint img {
-  max-width: none;
-}
-
-.date {
-  font-style: italic;
-  color: $gray;
-}
-
-// Specify the color of the selection
-::-moz-selection {
-  color: $black;
-  background: $lightGray;
-}
-::selection {
-  color: $black;
-  background: $lightGray;
-}
-
-// Nicolas Gallagher's micro clearfix hack
-// http://nicolasgallagher.com/micro-clearfix-hack/
-.clearfix:before,
-.clearfix:after {
-    content: " ";
-    display: table;
-}
-
-.clearfix:after {
-    clear: both;
-}
-
-/*********************/
-/* LAYOUT / SECTIONS */
-/*********************/
-
-//
-// .masthead
-//
-
-.wrapper-masthead {
-  margin-bottom: 50px;
-}
+.wrapper-masthead { margin-bottom: 50px; }
 
 .masthead {
-  padding: 150px 0;
-  border-bottom: 1px solid $burntUmber;
-
-  @include mobile {
-    text-align: center;
-  }
+  border-bottom: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 40px 10px;
+  border-bottom: 3px solid $burntUmber;
 }
 
 .site-avatar {
-  float: left;
-  width: 300px;
-  height: 300px;
-  margin-right: 20px;
-
+  flex: 0 1 250px;
   display: flex;
   justify-content: center;
   align-items: center;
 
-  @include mobile {
-    float: none;
-    display: block;
-    margin: 0 auto;
-  }
-
   img {
-    width: 100%; /* Make the image fill the container */
-    height: 100%; /* Ensure the image scales with the container */
-    object-fit: cover; /* Prevent image distortion */
-    border: 2px solid $burntUmber; /* Color and frame type */
-    border-radius: 20%; /* Make the image circular */
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border: 2px solid $burntUmber;
+    border-radius: 20%;
     box-shadow: 0px 0px 20px $burntUmber;
-  }
-}
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    border-color: $burntUmber;
 
-.site-avatar img {
-  transition: opacity 0.5s ease, transform 0.5s ease;
-}
-.site-avatar img:hover {
-  opacity: 0.9; /* 70% opacity */
-}
-.site-avatar img:hover {
-  transform: scale(0.9); /* Increases size to 110% */
-}
-
-.site-info {
-  float: left;
-
-  @include mobile {
-    float: none;
-    display: block;
-    margin: 0 auto;
-  }
-}
-
-.site-name {
-  margin: 10px 0px 0px 0px;
-  color: $burntUmber;
-  cursor: pointer;
-  font-family: $helvetica;
-  font-weight: 300;
-  font-size: 3rem;
-  letter-spacing: 2px;
-  text-align: center; /* Centers text inside the container */
-  display: block; /* Ensure it behaves as a block element */
-  //border: 1px solid $black;
-  width: 800px;
-  font-weight: 700;
-}
-
-.site-description {
-  margin: 10px 0px 0px 0px;
-  color: $burntUmber;
-  font-size: 30px;
-  width: 800px;
-  height: 200px;
-  text-align: center;
-  //border: 1px solid $black;
-
-  @include mobile {
-    margin: 3px 0;
-  }
-}
-
-nav {
-  float: right;
-  margin-top: 23px; // @TODO: Vertically middle align
-  font-family: $helveticaNeue;
-  font-size: 20px;
-
-  @include mobile {
-    float: none;
-    margin-top: 9px;
-    display: block;
-    font-size: 16px;
-  }
-
-  a {
-    margin-left: 20px;
-    color: $burntUmber;
-    text-align: right;
-    font-weight: 300;
-    letter-spacing: 1px;
-
-    @include mobile {
-      margin: 0 10px;
-      color: $blue;
+    &:hover {
+      opacity: 0.9;
+      transform: scale(0.9);
     }
   }
 }
 
-//
-// .main
-//
+.site-info {
+  flex: 1 1 300px;
+  text-align: center;
+}
+
+.site-name,
+.site-description {
+  width: 100%;
+}
+
+// ---------------------
+// NAVIGATION
+// ---------------------
+
+.navigation {
+  margin: 0 auto;
+  max-width: 1200px;
+  position: relative;
+  padding: 10px;
+}
+
+/* Hamburger toggle */
+.menu-toggle { display: none; }
+.menu-icon {
+  display: none;
+  font-size: 30px;
+  color: $burntUmber;
+  cursor: pointer;
+  user-select: none;
+}
+
+/* Desktop nav */
+.top-nav {
+  display: flex;
+  justify-content: flex-end;
+  gap: 20px;
+  font-family: $helveticaNeue;
+  font-size: 20px;
+}
+
+.top-nav a {
+  color: $burntUmber;
+  font-weight: 300;
+  letter-spacing: 1px;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.top-nav a:hover { color: $blue; }
+
+// Mobile nav
+@media screen and (max-width: 768px) {
+  .menu-icon { display: block; }
+
+  .top-nav {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    background: $softLightBrown;
+    width: 100%;
+    padding: 10px 0;
+    border-top: 1px solid $burntUmber;
+    border-bottom: 1px solid $burntUmber;
+  }
+
+  .menu-toggle:checked + .menu-icon + .top-nav {
+    display: flex;
+  }
+
+  .top-nav a { font-size: 18px; margin: 1px 0; }
+}
+
+// ---------------------
+// POSTS / MAIN CONTENT
+// ---------------------
 
 .posts > .post {
   padding-bottom: 2em;
   border-bottom: 1px solid $lightGray;
 }
+.posts > .post:last-child { border-bottom: none; }
 
-.posts > .post:last-child {
-  padding-bottom: 1em;
-  border-bottom: none;
+.post blockquote {
+  margin: 1.8em .8em;
+  border-left: 2px solid $gray;
+  padding: 0.1em 1em;
+  color: $gray;
+  font-size: 22px;
+  font-style: italic;
 }
 
-.post {
-  blockquote {
-    margin: 1.8em .8em;
-    border-left: 2px solid $gray;
-    padding: 0.1em 1em;
-    color: $gray;
-    font-size: 22px;
-    font-style: italic;
-  }
+.post .comments { margin-top: 10px; }
+.post .read-more { text-transform: uppercase; font-size: 15px; }
 
-  .comments {
-    margin-top: 10px;
-  }
-
-  .read-more {
-    text-transform: uppercase;
-    font-size: 15px;
-  }
-}
+// ---------------------
+// FOOTER
+// ---------------------
 
 .wrapper-footer {
-  margin-top: 100px;
-  border-top: 1px solid $burntUmber;
-  border-bottom: 1px solid $burntUmber;
-  background-color: $lightGray;
+  //margin: 0 auto;
+  //max-width: 1200px;
+  //padding: 0 10px;
+  //margin-top: 100px;
+
+  //border-top: 1px solid $burntUmber;
+  //border-bottom: 1px solid $burntUmber;
+  //background-color: $softBeige;
+  //border-color: $burntUmber;
+
+  display: flex;
+  justify-content: center; // centers icons horizontally
+  gap: 20px;               // space between icons
+  margin: 100px auto 0;
+  max-width: 1200px;
+  padding: 0 100px;
+}
+.wrapper-footer svg {
+  width: 24px;
+  height: 24px;
+  fill: $burntUmber;
+  transition: fill 0.3s ease;
+}
+.wrapper-footer a:hover svg {
+  fill: $linkBlue;
 }
 
 footer {
   padding: 10px 0;
   text-align: center;
 }
+
+// ---------------------
+// THEME TOGGLE
+// ---------------------
 
 #theme-toggle {
   position: fixed;
@@ -329,31 +257,36 @@ footer {
   color: white;
   border: none;
   border-radius: 50%;
-  cursor: pointer;
-  font-size: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
   transition: background-color 0.3s ease, transform 0.3s ease;
+
+  &:hover { transform: scale(1.1); }
 }
-#theme-toggle:hover {
-  background-color: #053ba5;
-  transform: scale(1.1);
-}
-#theme-icon {
-  font-size: 24px;
-}
-/* Dark Mode Styles */
+
+#theme-icon { font-size: 24px; }
+
 body.dark-mode {
   background-color: black;
   color: white;
-}
-body.dark-mode a {
-  color: #4da6ff;
+
+  a { color: #4da6ff; }
 }
 
+// ---------------------
+// MOBILE FONT SIZES
+// ---------------------
 
-// Settled on moving the import of syntax highlighting to the bottom of the CSS
-// ... Otherwise it really bloats up the top of the CSS file and makes it difficult to find the start
+@media (max-width: 768px) {
+  body { font-size: 16px; line-height: 1.6; }
+  h1 { font-size: 28px; }
+  h2 { font-size: 22px; }
+  .site-description { font-size: 20px; }
+}
+
+// ---------------------
+// SYNTAX / ICONS
+// ---------------------
 @import "highlights";
 @import "svg-icons";

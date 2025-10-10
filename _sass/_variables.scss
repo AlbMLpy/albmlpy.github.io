@@ -13,7 +13,14 @@ $darkGray: #333;
 $gray: #666;
 $lightGray: #eee;
 $white: #fff;
+$softLightBrown: #F2E6E1;
+
 $burntUmber: #330000;
+$warmCream: #FFF8F0; // main background
+$softBeige: #F5E8E0; // footer / secondary
+$warmGray: #666666;  // paragraph text
+$linkBlue: #4183C4;  // links hover
+$hoverAmber: #BB4400; // optional hover alternative
 
 // Font stacks
 $helvetica: Helvetica, Arial, sans-serif;
@@ -23,7 +30,7 @@ $roboto: Roboto;
 
 // Mobile breakpoints
 @mixin mobile {
-  @media screen and (max-width: 640px) {
+  @media screen and (max-width: 768px) {
     @content;
   }
 }
