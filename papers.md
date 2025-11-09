@@ -4,26 +4,26 @@ title: Research Papers
 permalink: /papers/
 ---
 
-- ### **[Tensor Network Based Feature Learning Model](https://proceedings.mlr.press/v258/saiapin25a.html)** - *AISTATS, 2025* 
+- **[Tensor Network Based Feature Learning Model](https://proceedings.mlr.press/v258/saiapin25a.html)** - *AISTATS, 2025* 
 
   <img src="/images/papers/FL_TNKM.png" alt="Tensor Network Based Feature Learning Model" class="framed-image">
 
   In this paper, we introduce the Feature Learning (FL) model, where tensor-product features are represented as a learnable *Canonical Polyadic Decomposition (CPD)*. By leveraging this CPD structure, we efficiently learn the hyperparameters associated with different features alongside the model parameters using an *Alternating Least Squares (ALS)* optimization method. We prove the effectiveness of the FL model through experiments on real data of various dimensionality and scale. The results show that the FL model can be consistently trained 3-5 times faster than and have the prediction quality on par with a standard cross-validated model. [*GitHub*](https://github.com/AlbMLpy/TN-FL-Model).
 
-- ### **[Federated Privacy-Preserving Collaborative Filtering For On-Device Next App Prediction](https://link.springer.com/article/10.1007/s11257-024-09395-0)** - *UMUAI, The Journal of Personalization Research, 2024*
+- **[Federated Privacy-Preserving Collaborative Filtering For On-Device Next App Prediction](https://link.springer.com/article/10.1007/s11257-024-09395-0)** - *UMUAI, The Journal of Personalization Research, 2024*
 
   <img src="/images/papers/SeqMF.png" alt="Privacy-Preserving Collaborative Filtering" class="framed-image">
 
   In this study, we propose a novel SeqMF model to solve the problem of predicting the next app launch during mobile device usage. We modify the structure of the classical matrix factorization model and update the training procedure to sequential learning. Since the data about user experience are distributed among devices, the *federated learning setup* is used to train the proposed *sequential matrix factorization model*. One more ingredient of our approach is a new privacy mechanism that guarantees the protection of the sent data from the users to the remote server. To demonstrate the efficiency of the proposed model, we use publicly available mobile user behavior data. We compare our model with sequential rules and models based on the frequency of app launches. Our experiments show that the proposed model provides comparable quality with other methods different environments. 
 
-- ### **[Dynamical Collaborative Filtering Recommender System](https://arxiv.org/abs/2312.10064)** - *Arxiv paper, 2023*
+- **[Dynamical Collaborative Filtering Recommender System](https://arxiv.org/abs/2312.10064)** - *Arxiv paper, 2023*
 
   <img src="/images/papers/Tireca.png" alt="Tucker Integrator Recommender (TIRecA)" class="framed-image" style="width:70%">
 
   In production applications of recommender systems, a continuous data flow is used to update models in real-time. Many recommender models require complete retraining to adapt to new data. In this work, we introduce a novel collaborative filtering model for sequential problems, called the *Tucker Integrator* Recommender (TIRecA). TIRecA efficiently updates its parameters using only new data segments, allowing for the incremental addition of new users and items to the recommender system.
   To demonstrate the effectiveness of the proposed model, we conducted experiments on four publicly available datasets: MovieLens 20M, Amazon Beauty, Amazon Toys and Games, and Steam. Our comparison with general matrix- and tensor-based baselines, in terms of prediction quality and computational time, reveals that TIRecA achieves comparable prediction accuracy while being 10–20 times faster in training time. [*GitHub*](https://github.com/AlbMLpy/DynamicCF).
 
-- ### **[MEKER: Memory Efficient Knowledge Embedding Representation for Link Prediction and Question Answering](https://aclanthology.org/2022.acl-srw.27/)** - *ACL, 2022* 
+- **[MEKER: Memory Efficient Knowledge Embedding Representation for Link Prediction and Question Answering](https://aclanthology.org/2022.acl-srw.27/)** - *ACL, 2022* 
   
   <img src="/images/papers/MEKER.png" alt="Memory Efficient Knowledge Embedding Representation" class="framed-image">
 
