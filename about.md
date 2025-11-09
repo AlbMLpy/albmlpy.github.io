@@ -4,10 +4,12 @@ title: About Me
 permalink: /about/
 ---
 
-Hi! I’m Albert, I’m currently a PhD Candidate at Delft University of Technology, specializing in **Tensor Network Machine Learning** advised by Prof. Dr. ir. Kim Batselier.
+Hi! I’m Albert, a PhD Candidate at Delft University of Technology, specializing in **Tensor Network Machine Learning** advised by Prof. Dr. ir. Kim Batselier.
 
-My research is focused on **Tensor Network-based methods** to leverage their potential to enhance the efficiency of **Machine Learning** and **Deep Learning** models while maintaining expressiveness. My work explores the intersection of **Bayesian probabilistic models** and **large-scale ML architectures**, aiming to develop more efficient, interpretable, and scalable AI systems.
+My research is focused on **probabilistic modeling**, **tensor networks**, and **machine learning**. I develop methods that make AI systems more **efficient, interpretable, and uncertainty-aware** by combining **Bayesian approaches** with **tensor networks** (CP, Tucker, TT) in deep and kernel-based architectures.
 
-Additionally, I work on **Uncertainty Estimation** techniques, incorporating Bayesian approaches to improve model reliability, robustness, and decision-making under uncertainty.
+I’m particularly interested in building **scalable and reliable learning systems** that retain expressiveness while reducing computational and memory costs. My work has applications in **recommender systems**, **knowledge graphs**, and **privacy-preserving federated learning**.
 
-Beyond academia, I have extensive experience applying ML principles to real-world applications, particularly in **Recommender Systems**. My expertise spans the full ML pipeline, from data processing (SQL, Pandas, PySpark) to scientific computing (NumPy, SciPy) and model development (Python, PyTorch, JAX, scikit-learn, LLM-based technologies).
+Beyond research, I enjoy translating theory into practice — applying ML methods to real-world data and large-scale systems. I work across the full ML pipeline: **data processing** (SQL, Pandas, PySpark), **scientific computing** (NumPy, SciPy), and **model development** (Python, PyTorch, JAX, scikit-learn, and LLM-based technologies).
+
+Broadly, I’m driven by the goal of creating **efficient and trustworthy AI** — systems that are lighter, faster, and more reliable through principled mathematical design.
