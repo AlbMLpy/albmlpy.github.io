@@ -1,0 +1,76 @@
+.framed-image {
+    border: 2px solid #330000; /* frame color and width */
+    border-radius: 8px;         /* rounded corners */
+    width: 75%;                /* responsive width */
+    height: auto;               /* maintain aspect ratio */
+    margin-bottom: 1rem;
+  }
+  .pub {
+    margin-bottom: 1rem;
+    padding: 1.5rem;
+    border: 1px solid #eadfce;
+    border-radius: 10px;
+    background: #fffaf3;
+  }
+  .pub:hover {
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+  }
+  .pub-details summary {
+    cursor: pointer;
+    display: inline-block;
+    padding: 6px 12px;
+    border: 1px solid #d9c9b8;
+    border-radius: 6px;
+    background: #fffaf3;
+    font-size: 1rem;
+  }
+  .pub-details summary:hover {
+    background: #f3e8da;
+  }
+
+  .pub-meta {
+    font-size: 1.1rem;
+    color: #333;
+    margin-top: -0.2rem;
+    margin-bottom: 1rem;
+  }
+
+  .pub-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 1rem;
+    flex-wrap: wrap;
+  }
+  /* shared button style */
+  .pub-btn {
+    display: inline-block;
+    padding: 6px 12px;
+    border: 1px solid #d9c9b8;
+    border-radius: 6px;
+    background: #fffaf3;
+    text-decoration: none;
+    font-size: 1rem;
+    color: #333;
+    cursor: pointer;
+    transition: background 0.2s ease, transform 0.1s ease;
+  }
+  .pub-btn:hover {
+    background: #f3e8da;
+    transform: translateY(-1px);
+  }
+  /* remove default details arrow styling */
+  .pub-details summary {
+    list-style: none;
+  }
+  /* optional: remove triangle marker (Chrome/Safari) */
+  .pub-details summary::-webkit-details-marker {
+    display: none;
+  }
+  /* summary content spacing */
+  .pub-details p {
+    margin-top: 0.8rem;
+  }
+  .pub-summary {
+    margin-top: 0.8rem;
+  }

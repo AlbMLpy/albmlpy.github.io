@@ -1,0 +1,36 @@
+<div class="pub">
+
+  <h2 class="pub-title">
+    <a href="{{ include.paper_url }}">
+      {{ include.title }}
+    </a>
+  </h2>
+
+  <p class="pub-meta">
+    {{ include.meta }}
+  </p>
+
+  {% if include.image %}
+  <img src="{{ include.image }}" class="framed-image">
+  {% endif %}
+
+  <div class="pub-actions">
+
+    <details class="pub-details">
+      <summary class="pub-btn">Summary</summary>
+      <div class="pub-summary">
+        <p>{{ include.summary | markdownify }}</p>
+      </div>
+    </details>
+
+    {% if include.paper_url %}
+    <a class="pub-btn" href="{{ include.paper_url }}">Paper</a>
+    {% endif %}
+
+    {% if include.code_url %}
+    <a class="pub-btn" href="{{ include.code_url }}">Code</a>
+    {% endif %}
+
+  </div>
+
+</div>
