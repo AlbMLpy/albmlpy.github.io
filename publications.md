@@ -8,6 +8,24 @@ description: Publications and research papers by Albert Saiapin in machine learn
 Selected publications are listed below. For a full list, see my [Google Scholar profile](https://scholar.google.com/citations?user=k3t9iugAAAAJ&hl=en).
 
 {% include paper.html
+title="Laplace Approximation For Bayesian Tensor Network Kernel Machines"
+meta="ArXiv preprint, 2026 | Machine Learning · Bayesian Inference · Tensor Networks · Uncertainty Estimation · Kernel Methods "
+paper_url="https://arxiv.org/abs/2604.26673"
+code_url="https://github.com/AlbMLpy/laplace-tnkm"
+image="/images/papers/LA-TNKM_hess.png"
+summary=" Uncertainty estimation is essential for robust decision-making in the presence of ambiguous or out-of-distribution inputs. Gaussian Processes (GPs) are classical kernel-based models that offer principled uncertainty quantification and perform well on small- to medium-scale datasets. Alternatively, formulating the weight space learning problem under tensor network assumptions yields scalable tensor network kernel machines. However, these assumptions break Gaussianity, complicating standard probabilistic inference. This raises a fundamental question: how can tensor network kernel machines provide principled uncertainty estimates? We propose a novel Bayesian Tensor Network Kernel Machine (LA-TNKM) that employs a (linearized) Laplace approximation for Bayesian inference. A comprehensive set of numerical experiments shows that the proposed method consistently matches or surpasses Gaussian Processes and Bayesian Neural Networks (BNNs) across diverse UCI regression benchmarks, highlighting both its effectiveness and practical relevance. "
+%}
+
+{% include paper.html
+title="Laplace Approximation For Tensor Train Kernel Machines In System Identification"
+meta="ArXiv preprint, 2025 | System Identification · Bayesian Inference · Tensor Trains · Kernel Methods "
+paper_url="https://arxiv.org/abs/2512.02532"
+code_url="https://github.com/AlbMLpy/laplace-ttkm"
+image="/images/papers/LA-TTKM_preds.png"
+summary=" To address the scalability limitations of Gaussian process (GP) regression, several approximation techniques have been proposed. One such method is based on tensor networks, which utilizes an exponential number of basis functions without incurring exponential computational cost. However, extending this model to a fully probabilistic formulation introduces several design challenges. In particular, for tensor train (TT) models, it is unclear which TT-core should be treated in a Bayesian manner. We introduce a Bayesian tensor train kernel machine that applies Laplace approximation to estimate the posterior distribution over a selected TT-core and employs variational inference (VI) for precision hyperparameters. Experiments show that core selection is largely independent of TT-ranks and feature structure, and that VI replaces cross-validation while offering up to 65x faster training. The method's effectiveness is demonstrated on an inverse dynamics problem. "
+%}
+
+{% include paper.html
 title="Tensor Network Based Feature Learning Model"
 meta="AISTATS, 2025 | Machine Learning · Tensor Methods · Feature Learning · Kernel Methods "
 paper_url="https://proceedings.mlr.press/v258/saiapin25a.html"
