@@ -1,7 +1,7 @@
 <div class="pub">
 
   <h2 class="pub-title">
-    <a href="{{ include.paper_url }}">
+    <a href="{{ include.title_url | default: include.paper_url }}">
       {{ include.title }}
     </a>
   </h2>
@@ -29,6 +29,18 @@
 
     {% if include.code_url %}
     <a class="pub-btn" href="{{ include.code_url }}">Code</a>
+    {% endif %}
+
+    {% if include.docs_url %}
+    <a class="pub-btn" href="{{ include.docs_url }}">Documentation</a>
+    {% endif %}
+
+    {% if include.pypi_url %}
+    <a class="pub-btn" href="{{ include.pypi_url }}">PyPI</a>
+    {% endif %}
+
+    {% if include.doi %}
+    <a class="pub-btn" href="{{ include.doi }}">DOI</a>
     {% endif %}
 
   </div>

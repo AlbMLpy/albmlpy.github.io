@@ -8,6 +8,15 @@ description: Publications and research papers by Albert Saiapin in machine learn
 Selected publications are listed below. For a full list, see my [Google Scholar profile](https://scholar.google.com/citations?user=k3t9iugAAAAJ&hl=en).
 
 {% include paper.html
+title="Tensor Network Kernel Machines: A JAX Framework for Machine Learning and Nonlinear System Identification"
+meta="ArXiv preprint, 2026 | Machine Learning · System Identification · Low-Rank Approximation · Kernel Methods · Software"
+paper_url="https://arxiv.org/abs/2608.07043"
+code_url="https://github.com/AlbMLpy/tnkm/tree/main/experiments"
+image="/images/papers/TNKM_Lib.png"
+summary=" Developing nonlinear models that are both expressive and computationally efficient remains a challenge in machine learning and nonlinear system identification. Tensor network kernel machines (TNKM) address this challenge by combining nonlinear feature representations with compact low-rank tensor-network parameterizations. However, practical and extensible software frameworks for developing TNKM models remain limited. In this work, we introduce **tnkm**, an open-source Python library for constructing and training TNKM models using JAX. The library provides a unified interface for combining different feature maps, tensor-network architectures, and optimization strategies, including alternating least squares and gradient-based methods. We demonstrate the capabilities of **tnkm** on nonlinear benchmark problems, showing that the implemented models achieve competitive prediction accuracy while retaining compact parameterizations and efficient training. The proposed framework facilitates reproducible development and application of tensor-network-based learning methods. "
+%}
+
+{% include paper.html
 title="Laplace Approximation For Bayesian Tensor Network Kernel Machines"
 meta="ArXiv preprint, 2026 | Machine Learning · Bayesian Inference · Tensor Networks · Uncertainty Estimation · Kernel Methods "
 paper_url="https://arxiv.org/abs/2604.26673"
